@@ -1,0 +1,93 @@
+/* =================================================================
+   RESPONSIVE OVERRIDES
+   Mobile-first base lives in style.css. This file layers on
+   tablet (>=768px), laptop (>=992px) and large desktop (>=1200px)
+   refinements — mainly layout switches that Bootstrap's grid
+   alone doesn't handle (hero split, timeline alternation, type scale).
+================================================================= */
+
+/* -----------------------------------------------------------------
+   SMALL PHONES (<400px) — extra tightening, not a Bootstrap breakpoint
+----------------------------------------------------------------- */
+@media (max-width: 399.98px) {
+  .hero-heading { font-size: 1.75rem; }
+  .brand-text { font-size: 1rem; }
+  .stat-number, .stat-suffix { font-size: 1.3rem; }
+}
+
+/* -----------------------------------------------------------------
+   TABLETS — 768px and up
+----------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .hero-heading { font-size: 2.6rem; }
+  .hero-subheading { font-size: 1.08rem; }
+  .section-heading h2 { font-size: 2rem; }
+
+  .hero-cta { flex-direction: row; }
+  .hero-cta .btn { width: auto; }
+
+  /* Timeline gets a touch more breathing room */
+  .timeline { padding-left: 3.2rem; }
+  .timeline-marker { left: -3.2rem; width: 2.5rem; height: 2.5rem; font-size: 0.95rem; }
+
+  .pro-challenge-note { font-size: 0.9rem; }
+}
+
+/* -----------------------------------------------------------------
+   LAPTOPS — 992px and up
+----------------------------------------------------------------- */
+@media (min-width: 992px) {
+  .hero-section { padding: 9rem 0 5rem; }
+  .hero-heading { font-size: 3.1rem; }
+  .hero-subheading { font-size: 1.12rem; }
+  .section-heading h2 { font-size: 2.3rem; }
+  .section-block { padding: 6rem 0; }
+
+  /* Code mockup grows a bit on larger panes */
+  .browser-body, .code-pane, .live-preview { min-height: 320px; }
+
+  /* ---- Timeline becomes a centered, alternating two-column path ---- */
+  .timeline { padding-left: 0; max-width: 880px; }
+  .timeline::before { left: 50%; transform: translateX(-1px); }
+
+  .timeline-item {
+    width: 50%;
+    padding: 0 0 2.4rem 0;
+  }
+  .timeline-item:nth-child(odd) {
+    padding-right: 3rem;
+    margin-left: 0;
+    text-align: right;
+  }
+  .timeline-item:nth-child(even) {
+    padding-left: 3rem;
+    margin-left: 50%;
+  }
+
+  .timeline-marker {
+    left: auto;
+    top: 0;
+  }
+  .timeline-item:nth-child(odd) .timeline-marker { right: -1.25rem; }
+  .timeline-item:nth-child(even) .timeline-marker { left: -1.25rem; }
+
+  .timeline-card:hover { transform: translateY(-3px); }
+  .timeline-item:nth-child(odd) .timeline-card:hover { transform: translateY(-3px); }
+
+  .pro-challenge-note { text-align: left; }
+}
+
+/* -----------------------------------------------------------------
+   LARGE DESKTOP — 1200px and up
+----------------------------------------------------------------- */
+@media (min-width: 1200px) {
+  .hero-heading { font-size: 3.4rem; }
+  .hero-mockup { transform: scale(1.03); }
+}
+
+/* -----------------------------------------------------------------
+   ULTRA-WIDE GUARD — keep hero copy from over-stretching
+----------------------------------------------------------------- */
+@media (min-width: 1400px) {
+  .hero-subheading { max-width: 560px; }
+}

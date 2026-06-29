@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Driven Web Development Summer Bootcamp 2026</title>
+  <meta name="description" content="A 10-day AI-driven Web Development Summer Bootcamp for students of Classes 9-12 (IX-XII). No prior coding required. Build real websites, get a certificate, and showcase a live portfolio.">
+
+  <!-- Google Fonts: Poppins (primary) + JetBrains Mono (code/data accent) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       NAVBAR — sticky, transparent at top, solid on scroll
+  ========================================================== -->
+  <nav class="navbar navbar-expand-lg main-navbar fixed-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">
+        <span class="brand-mark"><i class="bi bi-code-slash"></i></span>
+        <span class="brand-text">Web<span class="text-accent">Bootcamp</span><span class="brand-year">2026</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#why">Why Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#journey">10-Day Journey</a></li>
+          <li class="nav-item"><a class="nav-link" href="#parents">Students</a></li>
+          <li class="nav-item"><a class="nav-link" href="#schools">Schools</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a href="#contact" class="btn btn-nav-cta w-100">Register Now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================
+       1. HERO SECTION
+  ========================================================== -->
+  <header class="hero-section" id="hero">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="glow-blob blob-1" aria-hidden="true"></div>
+    <div class="glow-blob blob-2" aria-hidden="true"></div>
+    <div class="container">
+      <div class="row align-items-center gy-5">
+
+        <!-- Hero copy -->
+        <div class="col-lg-6 hero-copy" data-aos="fade-up">
+          <span class="eyebrow-badge"><i class="bi bi-stars me-1"></i> For Classes 9–12 · No Coding Background Needed</span>
+          <h1 class="hero-heading">Build Your First Website in Just <span class="text-primary-custom">10 Days</span></h1>
+          <p class="hero-subheading">
+            A 10-day AI-driven Web Development Summer Bootcamp designed for school students of Classes 9–12 (IX-XII).
+            Students will build real websites, learn modern developer tools, and launch their portfolios online.
+          </p>
+          <div class="d-flex flex-column flex-sm-row gap-3 hero-cta">
+            <a href="#pricing" class="btn btn-primary-custom btn-lg">
+              <i class="bi bi-pencil-square me-2"></i>Register Now
+            </a>
+            <a href="https://wa.me/917906072410" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">
+              <i class="bi bi-whatsapp me-2"></i>Contact on WhatsApp
+            </a>
+          </div>
+            <br>
+
+        <!-- Hero signature visual: a "code becomes a website" mockup -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+          <div class="hero-mockup">
+            <!-- Browser window chrome -->
+            <div class="browser-window">
+              <div class="browser-bar">
+                <span class="browser-dot dot-red"></span>
+                <span class="browser-dot dot-yellow"></span>
+                <span class="browser-dot dot-green"></span>
+                <span class="browser-url"><i class="bi bi-lock-fill me-1"></i>my-first-site.in</span>
+              </div>
+              <div class="browser-body">
+                <!-- Code pane: typed by JS -->
+                <pre class="code-pane" id="codeTyped" aria-hidden="true"></pre>
+                <!-- Live preview pane: revealed once "code" finishes typing -->
+                <div class="live-preview" id="livePreview">
+                  <div class="lp-header">
+                    <span class="lp-logo"><i class="bi bi-lightning-charge-fill"></i> StudentDev</span>
+                    <div class="lp-links">
+                      <span class="lp-link-dot"></span>
+                      <span class="lp-link-dot"></span>
+                    </div>
+                  </div>
+                  <div class="lp-hero-content">
+                    <h4>My First Website</h4>
+                    <p>Built in 10 days.</p>
+                    <button class="lp-real-btn">Hire Me</button>
+                  </div>
+                  <div class="lp-footer-dots">
+                    <span class="lp-footer-dot"></span>
+                    <span class="lp-footer-dot"></span>
+                    <span class="lp-footer-dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="mockup-tag mockup-tag-1"><i class="bi bi-check-circle-fill"></i> Can be build by you</span>
+            <span class="mockup-tag mockup-tag-2"><i class="bi bi-rocket-takeoff-fill"></i> Live in 10 days</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <a href="#why" class="scroll-cue" aria-label="Scroll to next section"><i class="bi bi-chevron-down"></i></a>
+  </header>
+
+  <!-- =========================================================
+       2. WHY THIS BOOTCAMP?
+  ========================================================== -->
+  <section class="section-block" id="why">
+    <div class="glow-blob blob-3" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-heading text-center" data-aos="fade-up">
+        <span class="eyebrow">Why This Bootcamp</span>
+        <h2>Empowering students to become technology creators</h2>
+        <p class="section-sub">Moving away from passive screen time to building functional, real-world web applications.</p>
+      </div>
+
+      <div class="row g-4 mt-4">
+        <!-- Each card below is one core promise of the bootcamp -->
+        <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+          <div class="why-card">
+            <div class="why-icon bg-primary-soft"><i class="bi bi-hammer"></i></div>
+            <h3>Become Creators</h3>
+            <p>Help students transition from being mere users of technology to creators of websites and applications.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
+          <div class="why-card">
+            <div class="why-icon bg-success-soft"><i class="bi bi-emoji-smile"></i></div>
+            <h3>No Coding Required</h3>
+            <p>Designed for absolute beginners. If students can use a computer, they can join and build websites.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="160">
+          <div class="why-card">
+            <div class="why-icon bg-accent-soft"><i class="bi bi-robot"></i></div>
+            <h3>AI as a Learning Tool</h3>
+            <p>Understand that AI is a tool to assist learning and productivity, not a replacement for creativity.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+          <div class="why-card">
+            <div class="why-icon bg-primary-soft"><i class="bi bi-stars"></i></div>
+            <h3>Explore Tech Early</h3>
+            <p>Discover interests and build academic confidence in tech fields before making college decisions.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+          <div class="why-card">
+            <div class="why-icon bg-success-soft"><i class="bi bi-globe"></i></div>
+            <h3>Live Web Hosting</h3>
+            <p>Every student will host their websites live online, creating a real portfolio they can share with anyone.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
+          <div class="why-card">
+            <div class="why-icon bg-accent-soft"><i class="bi bi-github"></i></div>
+            <h3>GitHub Profiles</h3>
+            <p>Set up a professional Git workflow to publish and manage code, building key developer profiles early.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="160">
+          <div class="why-card">
+            <div class="why-icon bg-primary-soft"><i class="bi bi-trophy"></i></div>
+            <h3>Interactive Hackathon</h3>
+            <p>Participate in a friendly final-day coding challenge if enrollment reaches 15 or more students.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
+          <div class="why-card">
+            <div class="why-icon bg-success-soft"><i class="bi bi-patch-check"></i></div>
+            <h3>School-Backed Certificate</h3>
+            <p>Earn a Certificate of Completion issued jointly under the name and seal of the participating school.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       3. WHAT STUDENTS WILL BUILD
+  ========================================================== -->
+  <section class="section-block section-alt" id="build">
+    <div class="container">
+      <div class="section-heading text-center" data-aos="fade-up">
+        <span class="eyebrow">By the End of the Bootcamp</span>
+        <h2>What every student will achieve and take home</h2>
+        <p class="section-sub">A concrete portfolio of live projects, professional tools, and certificates of completion.</p>
+      </div>
+
+      <div class="row g-4 mt-4">
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="0">
+          <div class="build-card">
+            <div class="build-icon"><i class="bi bi-person-badge"></i></div>
+            <h3>Personal Portfolio Website</h3>
+            <p>A clean online resume site featuring their bio, skills, and links to all the other projects built during the bootcamp.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="80">
+          <div class="build-card">
+            <div class="build-icon"><i class="bi bi-shop"></i></div>
+            <h3>Restaurant Website</h3>
+            <p>A modern food menu website with gallery displays, navigation, special deals, and mobile-responsive layouts.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="160">
+          <div class="build-card">
+            <div class="build-icon"><i class="bi bi-building"></i></div>
+            <h3>Hotel Website</h3>
+            <p>A booking landing page showcase exhibiting room listings, amenities cards, modern design styling, and contact details.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="0">
+          <div class="build-card">
+            <div class="build-icon"><i class="bi bi-globe2"></i></div>
+            <h3>Live Website Deployment</h3>
+            <p>Host websites live on the internet using free cloud hosting platforms, accessible via standard links.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="80">
+          <div class="build-card">
+            <div class="build-icon"><i class="bi bi-github"></i></div>
+            <h3>GitHub Profile</h3>
+            <p>A professional GitHub developer profile hosting their repository codebase, showcasing clean coding habits.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="160">
+          <div class="build-card">
+            <div class="build-icon"><i class="bi bi-award"></i></div>
+            <h3>Certificate of Completion</h3>
+            <p>A formal certificate awarded under the name of the participating school to validate practical learning achievements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       4. 10-DAY JOURNEY (vertical timeline)
+  ========================================================== -->
+  <section class="section-block" id="journey">
+    <div class="container">
+      <div class="section-heading text-center" data-aos="fade-up">
+        <span class="eyebrow">The 10-Day Journey</span>
+        <h2>One day at a time, from a blank screen to a live website</h2>
+        <p class="section-sub">Each day builds directly on the last — nothing is taught that isn't used.</p>
+      </div>
+
+      <div class="timeline mt-5">
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">01</div>
+          <div class="timeline-card"><h3>Introduction to Websites and Artificial Intelligence</h3><p>Understanding how the internet works, the role of web developers, and introducing AI as a tool for assistance and productivity.</p></div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">02</div>
+          <div class="timeline-card"><h3>HTML Fundamentals</h3><p>Learn the building blocks of the web—structuring content with headings, paragraphs, links, list items, and images.</p></div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">03</div>
+          <div class="timeline-card"><h3>CSS and Website Design</h3><p>Styling elements, applying color palettes, selecting modern typography, and understanding page spacing to design clean interfaces.</p></div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">04</div>
+          <div class="timeline-card"><h3>Bootstrap and Responsive Design</h3><p>Using the Bootstrap framework to build mobile-friendly grid layouts that look great on any screen size.</p></div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">05</div>
+          <div class="timeline-card"><h3>JavaScript Fundamentals</h3><p>Adding interactivity to pages, handling events, and creating simple features like mobile navigation toggle menus.</p></div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">06</div>
+          <div class="timeline-card"><h3>Learning to Use AI Tools Responsibly</h3><p>Exploring how to leverage AI tools for learning, planning, and debugging while preserving core logic and understanding.</p></div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">07</div>
+          <div class="timeline-card"><h3>Build a Restaurant Website</h3><p>A complete hands-on project to design a multi-section restaurant page with styled menus, image galleries, and contact details.</p></div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">08</div>
+          <div class="timeline-card"><h3>Build a Hotel Website</h3><p>Building a booking landing page with room displays, modern layouts, amenities, and reservation forms.</p></div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">09</div>
+          <div class="timeline-card"><h3>Publish Projects Online using GitHub</h3><p>Learning Git/GitHub basics to deploy and host student projects live online with accessible shareable URLs.</p></div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker">10</div>
+          <div class="timeline-card timeline-card-final">
+            <h3>Project Showcase, Career Guidance and Certificate Distribution</h3>
+            <p>Students present their live portfolios, receive career guidance for tech fields, and get their Certificate of Completion.</p>
+            <div class="pro-challenge-note">
+              <i class="bi bi-stars"></i>
+              <span><strong>Supabase Pro Challenge:</strong> Students who finish early will receive an optional advanced challenge: an introduction to Login &amp; Signup systems using Supabase Authentication.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       5. WHY PARENTS SHOULD CHOOSE THIS?
+  ========================================================== -->
+  <section class="section-block section-alt" id="parents">
+    <div class="container">
+      <div class="section-heading text-center" data-aos="fade-up">
+        <span class="eyebrow">Benefits for Students</span>
+        <h2>Empowering student growth through hands-on practice</h2>
+        <p class="section-sub">A meaningful program designed to build confidence, technical competence, and logical reasoning.</p>
+      </div>
+
+      <div class="row g-4 mt-4">
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="value-card value-card-parent"><i class="bi bi-hammer"></i><h3>Practical Projects</h3><p>Learn coding concepts through building functional website projects instead of memorizing dry theories.</p></div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+          <div class="value-card value-card-parent"><i class="bi bi-lightbulb"></i><h3>Creativity &amp; Logic</h3><p>Develop logical thinking, structured problem solving, and interface design skills simultaneously.</p></div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+          <div class="value-card value-card-parent"><i class="bi bi-puzzle"></i><h3>Problem-Solving</h3><p>Learn to debug, resolve coding syntax issues, and adapt to technical errors responsibly.</p></div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="value-card value-card-parent"><i class="bi bi-people"></i><h3>Presentation Skills</h3><p>Gain confidence by demonstrating personal live projects during peer review and feedback sessions.</p></div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+          <div class="value-card value-card-parent"><i class="bi bi-shield-check"></i><h3>Responsible AI Use</h3><p>Understand the responsible application of generative artificial intelligence as a supportive coding assistant.</p></div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+          <div class="value-card value-card-parent"><i class="bi bi-rocket-takeoff"></i><h3>Early Tech Portfolio</h3><p>Build an early website portfolio that can continue growing as students explore tech fields before college.</p></div>
+        </div>
+      </div>
+      <p class="text-center extra-value-line" data-aos="fade-up">…and most importantly, <strong>practical skill development</strong> — not just theory in a textbook.</p>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       6. WHY SCHOOLS SHOULD ORGANIZE THIS?
+  ========================================================== -->
+  <section class="section-block" id="schools">
+    <div class="glow-blob blob-1" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-heading text-center" data-aos="fade-up">
+        <span class="eyebrow">Benefits for Schools</span>
+        <h2>Supporting skill-based learning in institutions</h2>
+        <p class="section-sub">A plug-and-play summer program that seamlessly integrates with existing school infrastructure.</p>
+      </div>
+
+      <div class="row g-4 mt-4">
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="value-card value-card-school"><i class="bi bi-laptop"></i><h3>Future-Ready Tech</h3><p>Introduce students to future-ready web technologies and basic developer environments early.</p></div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+          <div class="value-card value-card-school"><i class="bi bi-palette"></i><h3>Innovation &amp; Creativity</h3><p>Encourage innovation, design thinking, and technical experimentation right inside the school.</p></div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+          <div class="value-card value-card-school"><i class="bi bi-graph-up-arrow"></i><h3>Project-Based Learning</h3><p>Promote practical curriculum goals, aligning school education with modern coding applications.</p></div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="value-card value-card-school"><i class="bi bi-calendar-event"></i><h3>Meaningful Activity</h3><p>Provide a structured and highly constructive summer learning experience on campus.</p></div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+          <div class="value-card value-card-school"><i class="bi bi-easel2"></i><h3>Opportunity to Showcase</h3><p>Give students a platform to showcase their live websites to classmates, teachers, and parents.</p></div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+          <div class="value-card value-card-school"><i class="bi bi-award"></i><h3>Institutional Recognition</h3><p>Deliver student Certificates of Completion bearing both the school name and instructor sign-off.</p></div>
+        </div>
+      </div>
+
+      <!-- Bootcamp Requirements & Guidelines for Schools -->
+      <div class="row mt-5 pt-4 border-top g-4">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="school-details-card">
+            <h4 class="mb-4 text-primary-custom"><i class="bi bi-gear-fill me-2"></i>School Infrastructure Requirements</h4>
+            <p class="mb-4">To ensure a smooth bootcamp experience, the school is requested to provide the following simple resources:</p>
+            <ul class="school-req-list">
+              <li>
+                <i class="bi bi-check2-square text-primary-custom me-2"></i>
+                <div><strong>Computer Lab or Classroom:</strong> Access to computer laboratory systems (students are also encouraged to bring their own laptops for an optimal experience).</div>
+              </li>
+              <li>
+                <i class="bi bi-check2-square text-primary-custom me-2"></i>
+                <div><strong>Internet Connection:</strong> Standard network internet (preferred) to upload code and publish websites live.</div>
+              </li>
+              <li>
+                <i class="bi bi-check2-square text-primary-custom me-2"></i>
+                <div><strong>Visual Projector:</strong> A projector or display screen (if available) for the instructor's live coding demonstrations.</div>
+              </li>
+              <li>
+                <i class="bi bi-check2-square text-primary-custom me-2"></i>
+                <div><strong>School Coordinator:</strong> One dedicated staff coordinator to assist with scheduling and communication.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="school-details-card">
+            <h4 class="mb-4 text-accent"><i class="bi bi-clipboard2-check-fill me-2"></i>Participation &amp; Program Guidelines</h4>
+            <p class="mb-4">Standard guidelines for conducting the summer program at the school campus:</p>
+            <ul class="school-req-list">
+              <li>
+                <i class="bi bi-info-circle text-accent me-2"></i>
+                <div><strong>Orientation Session:</strong> A brief interactive orientation session is held for students and parents before classes begin to preview projects and answer queries.</div>
+              </li>
+              <li>
+                <i class="bi bi-info-circle text-accent me-2"></i>
+                <div><strong>Minimum Enrollment:</strong> The program commences with a minimum enrollment of <strong>5 students</strong>.</div>
+              </li>
+              <li>
+                <i class="bi bi-info-circle text-accent me-2"></i>
+                <div><strong>Mini Hackathon:</strong> A special, friendly hackathon is organized on the final day if the total enrollment reaches <strong>15 or more students</strong>.</div>
+              </li>
+              <li>
+                <i class="bi bi-info-circle text-accent me-2"></i>
+                <div><strong>School-Branded Certificate:</strong> Every student receives a Certificate of Completion featuring the school name, logo, date, and signatures of the Principal and the Instructor.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       7. AI TOOLS STUDENTS WILL LEARN
+  ========================================================== -->
+  <section class="section-block section-alt" id="ai-tools">
+    <div class="container">
+      <div class="section-heading text-center" data-aos="fade-up">
+        <span class="eyebrow">AI Tools</span>
+        <h2>Learning to use AI the right way</h2>
+        <p class="section-sub">Students learn to use AI tools responsibly — to think faster and build faster, never to copy blindly.</p>
+      </div>
+
+      <div class="row g-3 g-lg-4 mt-4 justify-content-center">
+        <div class="col-4 col-sm-2" data-aos="fade-up" data-aos-delay="0">
+          <div class="ai-tool-chip"><i class="bi bi-chat-dots"></i><span>ChatGPT</span></div>
+        </div>
+        <div class="col-4 col-sm-2" data-aos="fade-up" data-aos-delay="60">
+          <div class="ai-tool-chip"><i class="bi bi-stars"></i><span>Claude</span></div>
+        </div>
+        <div class="col-4 col-sm-2" data-aos="fade-up" data-aos-delay="120">
+          <div class="ai-tool-chip"><i class="bi bi-github"></i><span>GitHub Copilot</span></div>
+        </div>
+        <div class="col-4 col-sm-2" data-aos="fade-up" data-aos-delay="180">
+          <div class="ai-tool-chip"><i class="bi bi-palette2"></i><span>Canva AI</span></div>
+        </div>
+        <div class="col-4 col-sm-2" data-aos="fade-up" data-aos-delay="240">
+          <div class="ai-tool-chip"><i class="bi bi-easel3"></i><span>Gamma</span></div>
+        </div>
+      </div>
+      <p class="text-center ai-tools-note" data-aos="fade-up">Every tool is taught with one rule: <strong>understand first, then use AI to move faster</strong> — not the other way around.</p>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       8. INSTRUCTOR SECTION
+  ========================================================== -->
+  <section class="section-block" id="instructor">
+    <div class="container">
+      <div class="section-heading text-center" data-aos="fade-up">
+        <span class="eyebrow">Your Instructor</span>
+        <h2>Taught by a National Hackathon Winner &amp; Tech Mentor</h2>
+      </div>
+
+      <div class="row justify-content-center mt-4">
+        <div class="col-lg-8">
+          <div class="instructor-card" data-aos="fade-up">
+            <div class="instructor-avatar"><i class="bi bi-person-fill"></i></div>
+            <div class="instructor-info">
+              <h3>Mohd Sarfraz</h3>
+              <ul class="instructor-meta">
+                <li><i class="bi bi-mortarboard-fill"></i> B.Tech CSE (AI &amp; ML) Student at Lovely Professional University</li>
+                <li><i class="bi bi-trophy-fill"></i> National Hackathon Winner (Astitwa)</li>
+                <li><i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/sarfrazcodes/" target="_blank" rel="noopener" class="text-primary-custom fw-semibold">Connect on LinkedIn</a></li>
+              </ul>
+              <p class="instructor-mission">"My aim is not only to teach students how websites are built, but also to encourage curiosity, creativity, and confidence that will benefit them regardless of the career they choose in the future."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       9. PRICING
+  ========================================================== -->
+  <section class="section-block section-alt" id="pricing">
+    <div class="glow-blob blob-2" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-heading text-center" data-aos="fade-up">
+        <span class="eyebrow">Pricing</span>
+        <h2>One simple plan. No hidden costs.</h2>
+      </div>
+
+      <div class="row justify-content-center mt-4">
+        <div class="col-lg-5 col-md-7">
+          <div class="pricing-card" data-aos="zoom-in">
+            <span class="pricing-badge">Most Popular</span>
+            <h3>Full Bootcamp Access</h3>
+            <div class="pricing-amount"><span class="currency">₹</span>1499</div>
+            <p class="pricing-caption">one-time fee, per student</p>
+            <ul class="pricing-features">
+              <li><i class="bi bi-check-circle-fill"></i> 10-Day AI-Driven Learning Program</li>
+              <li><i class="bi bi-check-circle-fill"></i> Build Portfolio, Restaurant &amp; Hotel Sites</li>
+              <li><i class="bi bi-check-circle-fill"></i> Live Website Deployment on GitHub</li>
+              <li><i class="bi bi-check-circle-fill"></i> School-Branded Certificate of Completion</li>
+              <li><i class="bi bi-check-circle-fill"></i> Live Showcase &amp; Career Guidance</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary-custom w-100 btn-lg">Register Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       10. FAQ
+  ========================================================== -->
+  <section class="section-block" id="faq">
+    <div class="container">
+      <div class="section-heading text-center" data-aos="fade-up">
+        <span class="eyebrow">Common Questions</span>
+        <h2>Questions parents usually ask</h2>
+      </div>
+
+      <div class="row justify-content-center mt-4">
+        <div class="col-lg-8">
+          <div class="accordion faq-accordion" id="faqAccordion" data-aos="fade-up">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  Does my child need prior coding knowledge?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Not at all. The bootcamp starts from the very basics, so any student from Class 9 to 12 can join — coder or not.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  Will students receive certificates?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Yes. Every student who completes the bootcamp receives a Certificate of Completion issued jointly under the participating school's name.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Do students need to bring their own laptops?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Students are encouraged to bring their own laptops for the best learning experience. However, students who do not have personal laptops can use the school's computer lab systems, subject to availability.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  Will projects remain with students after the bootcamp?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Absolutely. Every website a student builds — and the code behind it — belongs to them, even after the bootcamp ends. They can share their live project links with friends and family.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                  How does the final-day Hackathon work?
+                </button>
+              </h2>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">A friendly Mini Hackathon is organized if the total program enrollment reaches 15 or more students. It's a collaborative activity where they put all their 10-day coding skills into practice.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                  What resources are schools expected to provide?
+                </button>
+              </h2>
+              <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Schools are requested to provide a computer lab or classroom space, a standard internet connection, a projector or display screen, and designate one staff coordinator.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       11. CONTACT
+  ========================================================== -->
+  <section class="section-block section-alt" id="contact">
+    <div class="container">
+      <div class="section-heading text-center" data-aos="fade-up">
+        <span class="eyebrow">Get In Touch</span>
+        <h2>Ready to bring this bootcamp to your child or your school?</h2>
+        <p class="section-sub">Reach out and we'll walk you through dates, batches and onboarding.</p>
+      </div>
+
+      <div class="row justify-content-center mt-4 g-4">
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+          <a href="https://wa.me/917906072410" target="_blank" rel="noopener" class="contact-card contact-card-whatsapp">
+            <i class="bi bi-whatsapp"></i><h3>WhatsApp</h3><p>+91 79060 72410</p>
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="80">
+          <a href="tel:+917906072410" class="contact-card contact-card-call">
+            <i class="bi bi-telephone-fill"></i><h3>Call Now</h3><p>+91 79060 72410</p>
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="160">
+          <a href="mailto:sarfrazcodes@gmail.com" class="contact-card contact-card-email">
+            <i class="bi bi-envelope-fill"></i><h3>Email</h3><p>sarfrazcodes@gmail.com</p>
+          </a>
+        </div>
+        <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="240">
+          <div class="contact-card contact-card-location">
+            <i class="bi bi-geo-alt-fill"></i><h3>Location</h3><p>Dehradun, Uttarakhand, India</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       12. FOOTER
+  ========================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand footer-brand" href="#hero">
+            <span class="brand-mark"><i class="bi bi-code-slash"></i></span>
+            <span class="brand-text">Web<span class="text-accent">Bootcamp</span><span class="brand-year">2026</span></span>
+          </a>
+          <p class="footer-tagline">A 10-day, AI-driven Web Development Bootcamp that turns curious students into confident builders.</p>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#journey">10-Day Journey</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <h4>For You</h4>
+          <ul class="footer-links">
+            <li><a href="#parents">Students</a></li>
+            <li><a href="#schools">Schools</a></li>
+            <li><a href="#instructor">Instructor</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <h4>Follow Us</h4>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <p class="footer-copyright">© <span id="currentYear"></span> AI-Driven Web Development Summer Bootcamp. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button id="scrollTopBtn" aria-label="Scroll to top"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
