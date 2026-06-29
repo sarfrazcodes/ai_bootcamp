@@ -91,3 +91,37 @@
 @media (min-width: 1400px) {
   .hero-subheading { max-width: 560px; }
 }
+
+/* -----------------------------------------------------------------
+   MOBILE VIEWPORT CARD OPTIMIZATIONS (<576px)
+   ----------------------------------------------------------------- */
+@media (max-width: 575.98px) {
+  .why-card, .build-card, .value-card, .school-details-card {
+    padding: 1.25rem 0.9rem !important;
+  }
+  .why-icon {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 12px !important;
+    font-size: 1.2rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+  .build-icon {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 1.3rem !important;
+    margin-bottom: 0.8rem !important;
+  }
+  .value-card i {
+    font-size: 1.4rem !important;
+    margin-bottom: 0.7rem !important;
+  }
+  .why-card h3, .build-card h3, .value-card h3 {
+    font-size: 0.95rem !important;
+    margin-bottom: 0.4rem !important;
+  }
+  .why-card p, .build-card p, .value-card p {
+    font-size: 0.78rem !important;
+    line-height: 1.5 !important;
+  }
+}
